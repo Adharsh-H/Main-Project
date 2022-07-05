@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Flight price </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@500;700&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{{url_for('static',filename='lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+    <link href="{{url_for('static',filename='lib/lightbox/css/lightbox.min.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.min.css')}}">
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{{url_for('static',filename='css/style.css')}}" rel="stylesheet">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="51">
+    <!-- Navbar Start -->
+    <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-dark navbar-dark py-1 py-lg-0 px-lg-5">
+        <a href="index.html" class="navbar-brand d-block d-lg-none">
+            <h1 class="display-4 text-white text-uppercase m-0">FLIGHT FARE PREDICTION</h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+            <div class="navbar-nav ml-auto py-0">
+                <a href="#home" class="nav-item nav-link active">Home</a>
+                
+                <a href="#project" class="nav-item nav-link">Gallary</a>
+                
+                
+            </div>
+            <a href="#home" class="navbar-brand bg-primary px-4 mx-3 d-none d-lg-block">
+                <h1 class="display-4 text-white text-uppercase m-0">FLIGHT FARE PREDICTION</h1>
+            </a>
+            <div class="navbar-nav mr-auto py-0">
+               <!--- <a href="#team" class="nav-item nav-link">Team</a>
+                <a href="#faqs" class="nav-item nav-link">FAQs</a>
+                <a href="#testimonial" class="nav-item nav-link">Testimonial</a>-->
+                <a href="#about" class="nav-item nav-link">About</a>
+                <a href="{{url_for('home')}}" class="nav-item nav-link">Predict</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 mb-5 pb-5" id="home">
+        <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item position-relative active" style="height: 100vh; min-height: 400px;">
+                    <img class="position-absolute w-100 h-100" src="{{url_for('static',filename='img/carousel-1.jpg')}}" style="object-fit: cover;">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <!--<h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Solar Energy</h4>-->
+                            <h3 class="display-2 font-secondary text-white mb-4">Are you ready to fly?</h3>
+                        
+                            <a class="btn btn-light font-weight-bold py-3 px-5 mt-2 btn-scroll" href="{{url_for('qwerty')}}">Lets Predict the ticket price</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item position-relative" style="height: 100vh; min-height: 400px;">
+                    <img class="position-absolute w-100 h-100" src="{{url_for('static',filename='img/carousel-2.jpg')}}" style="object-fit: cover;">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <!--<h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Solar Energy</h4>-->
+                            <h3 class="display-2 font-secondary text-white mb-4">Find your cheapest flight.</h3>
+                            <a class="btn btn-light font-weight-bold py-3 px-5 mt-2 btn-scroll" href="{{url_for('asd')}}">Lets Predict the ticket price</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev justify-content-start" href="#header-carousel" data-slide="prev">
+                <div class="btn btn-primary px-0" style="width: 68px; height: 68px;">
+                    <span class="carousel-control-prev-icon mt-3"></span>
+                </div>
+            </a>
+            <a class="carousel-control-next justify-content-end" href="#header-carousel" data-slide="next">
+                <div class="btn btn-primary px-0" style="width: 68px; height: 68px;">
+                    <span class="carousel-control-next-icon mt-3"></span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5" id="about">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <img class="img-fluid mb-4 mb-lg-0" src="{{url_for('static',filename='img/about.jpg')}}" alt="">
+                </div>
+                <div class="col-lg-7">
+                    <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px; "></h6>
+                    <h1 class="display-4 mb-3"><span class="text-primary"></span> About</h1>
+                    <p style="color:white;">People who frequently travel through flight will have better knowledge on best discount and right time to buy the ticket. For the business purpose many airline companies change prices according to the seasons or time duration. They will increase the price when people travel more.This is an Website which helps to predict the ticket price within seconds.It contains the details of various flight of india. </p>
+                    <!--<a class="btn btn-primary font-weight-bold py-3 px-5 mt-2" type="button" data-toggle="modal" data-target="#exampleModalLong">Read More</a>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    
+
+
+    <!-- Gallery Start -->
+    <div class="container-fluid bg-gallery" id="project" style="padding: 120px 0; margin: 90px 0;">
+        <div class="section-title position-relative text-center" style="margin-bottom: 120px;">
+            <!--<h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Project</h6>-->
+            <h1 class="font-secondary display-4 text-white"> Photo Gallery</h1>
+        </div>
+        <div class="owl-carousel gallery-carousel">
+            <div class="gallery-item">
+                <img class="img-fluid w-100" src="{{url_for('static',filename='img/gallery-1.jpg')}}" alt="">
+                <a class="btn btn-primary" href="{{url_for('static',filename='img/gallery-1.jpg')}}" data-lightbox="gallery">
+                    <i class="fa fa-2x fa-plus text-white"></i>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <img class="img-fluid w-100" src="{{url_for('static',filename='img/gallery-2.jpg')}}" alt="">
+                <a class="btn btn-primary" href="{{url_for('static',filename='img/gallery-2.jpg')}}" data-lightbox="gallery">
+                    <i class="fa fa-2x fa-plus text-white"></i>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <img class="img-fluid w-100" src="{{url_for('static',filename='img/gallery-3.jpg')}}" alt="">
+                <a class="btn btn-primary" href="{{url_for('static',filename='img/gallery-3.jpg')}}" data-lightbox="gallery">
+                    <i class="fa fa-2x fa-plus text-white"></i>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <img class="img-fluid w-100" src="{{url_for('static',filename='img/gallery-4.jpg')}}" alt="">
+                <a class="btn btn-primary" href="{{url_for('static',filename='img/gallery-4.jpg')}}" data-lightbox="gallery">
+                    <i class="fa fa-2x fa-plus text-white"></i>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <img class="img-fluid w-100" src="{{url_for('static',filename='img/gallery-5.jpg')}}" alt="">
+                <a class="btn btn-primary" href="{{url_for('static',filename='img/gallery-5.jpg')}}" data-lightbox="gallery">
+                    <i class="fa fa-2x fa-plus text-white"></i>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <img class="img-fluid w-100" src="{{url_for('static',filename='img/gallery-6.jpg')}}" alt="">
+                <a class="btn btn-primary" href="{{url_for('static',filename='img/gallery-6.jpg')}}" data-lightbox="gallery">
+                    <i class="fa fa-2x fa-plus text-white"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Gallery End -->
+
+
+   
+
+    
+
+
+    
+
+
+    <!-- Scroll to Bottom -->
+    <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-outline-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="{{url_for('static',filename='lib/easing/easing.min.js')}}"></script>
+    <script src="{{url_for('static',filename='lib/waypoints/waypoints.min.js')}}"></script>
+    <script src="{{url_for('static',filename='lib/owlcarousel/owl.carousel.min.js')}}"></script>
+    <script src="{{url_for('static',filename='lib/isotope/isotope.pkgd.min.js')}}"></script>
+    <script src="{{url_for('static',filename='lib/lightbox/js/lightbox.min.js')}}"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="{{url_for('static',filename='javascript/main.js')}}"></script>
+</body>
+
+</html>
